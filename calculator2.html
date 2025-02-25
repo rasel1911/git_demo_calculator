@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+
+<div class="calculator">
+        <table>
+            <tr>
+                <th colspan="4"><div class="display" id="display">0</div></th>
+            </tr>
+            <tr>
+                <td><button class="button-ac" onclick="clearDisplay()">AC</button></td>
+                <td><button class="button-operator" onclick="setOperator('/')">&divide;</button></td>
+                <td><button class="button-operator" onclick="setOperator('*')">&times;</button></td>
+                <td><button class="button-operator" onclick="setOperator('-')">&minus;</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="appendNumber(7)">7</button></td>
+                <td><button class="button" onclick="appendNumber(8)">8</button></td>
+                <td><button class="button" onclick="appendNumber(9)">9</button></td>
+                <td><button class="button-operator" onclick="setOperator('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="appendNumber(4)">4</button></td>
+                <td><button class="button" onclick="appendNumber(5)">5</button></td>
+                <td><button class="button" onclick="appendNumber(6)">6</button></td>
+                <td rowspan="3"><button class="button-operator" onclick="calculate()">=</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="appendNumber(1)">1</button></td>
+                <td><button class="button" onclick="appendNumber(2)">2</button></td>
+                <td><button class="button" onclick="appendNumber(3)">3</button></td>
+                
+            </tr>
+            <tr>
+                <td><button class="button" onclick="setOperator('%')">%</button></td>
+                <td><button class="button" onclick="appendNumber(0)">0</button></td>
+                <td><button class="button" onclick="appendNumber('.')">.</button></td>
+                
+            </tr>  
+    </table>
+</div>
+
+<script>
+    let CN = '';
+    let PN = '';
+    let operator = '';
+    
+    function appendNumber(number) {
+        if (CN.length < 10) {
+            CN += number;
+            updateDisplay();
+        }
+    }
+    
+    function setOperator(op) {
+        if (CN === '' && PN === '') return;
+        if (PN !== '') calculate();
+        operator = op;
+        PN = CN;
+        CN = '';
+    }
+    
+    function calculate() {
+        if (CN === '' || PN === '' || operator === '') return;
+        let result;
+        const prev = parseFloat(PN);
+        const curr = parseFloat(CN);
+        
+        switch (operator) {
+            case '+':
+                result = prev + curr;
+                break;
+            case '-':
+                result = prev - curr;
+                break;
+            case '*':
+                result = prev * curr;
+                break;
+            case '/':
+                result = curr !== 0 ? prev / curr : 'Error';
+            case '%':
+                result = prev%curr;
+                break;
+            default:
+                return;
+        }
+    
+        CN = result.toString().slice(0, 10);
+        operator = '';
+        PN = '';
+        updateDisplay()
+
+    }
+    
+    function clearDisplay() {
+        CN = '';
+        PN = '';
+        operator = '';
+        updateDisplay();
+    }
+    
+    function updateDisplay() {
+        const display = document.getElementById('display');
+        display.textContent = CN || '0';
+    }
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fcfcfc;
+}
+.calculator{
+    background-color: #7a6767a2;
+    height: 400px;
+    width: 300px;
+    border-radius: 2%;
+}
+.calculator table {
+    height: 100%;
+    width: 100%;
+}
+.calculator table tr td button{
+    width: 100%;
+    height: 100%;
+}
+.display{
+    width: 100%;
+    text-align: right;
+    font-size: 35px;
+    
+}
+.button-ac{
+    background-color: red;
+    border-radius: 6px;
+}
+.button-operator{
+    background-color: rgba(221, 132, 80, 0.562);
+    border-radius: 6px;
+}
+.button{
+    border-radius: 6px;
+}
