@@ -15,8 +15,8 @@ This is a simple calculator built using HTML, CSS, and JavaScript. It performs b
 - CSS: Styling for better appearance
 - JavaScript: Functional logic for calculations
 
-## How to Use
-    1. Open calculator.html in a web browser.
+## How to Use 
+    1. Open calculator.html/calculator1.html in a web browser.
     2. Use the on-screen buttons to perform calculations.
     3. Click = to get results and C to clear the screen.
 
