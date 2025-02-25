@@ -1,8 +1,22 @@
-"#Git demo project" 
-Create a simple calculator using HTML for structure, CSS for styling, and JavaScript for functionality. 
-Use buttons for digits and operations, a display area for input/output, and JavaScript to handle calculations and updates.
-Style it with CSS for a clean, user-friendly design. 
-This project is great for learning basic web development concepts.
 
-- Demonstrates Git branching
-- Shows modify and merge changes
+# Simple Calculator using HTML, CSS, and JavaScript
+
+This is a simple calculator built using HTML, CSS, and JavaScript. It performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
+
+
+
+## Features
+- Responsive design using CSS
+- Basic arithmetic operations
+- User-friendly interface
+
+## Technologies Used
+- HTML: Structure of the calculator
+- CSS: Styling for better appearance
+- JavaScript: Functional logic for calculations
+
+## How to Use
+    1. Open calculator.html in a web browser.
+    2. Use the on-screen buttons to perform calculations.
+    3. Click = to get results and C to clear the screen.
+
