@@ -4,4 +4,5 @@ Use buttons for digits and operations, a display area for input/output, and Java
 Style it with CSS for a clean, user-friendly design. 
 This project is great for learning basic web development concepts.
 
-**this project push in main branch
+- Demonstrates Git branching
+- Shows modify and merge changes
